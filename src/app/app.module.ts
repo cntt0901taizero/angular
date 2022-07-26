@@ -10,15 +10,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { SharedModule } from 'src/shared/shared.module';
+import { LayoutComponent } from './layout/layout.component';
+import { LoginLogoutComponent } from './layout/header-menu/login-logout/login-logout.component';
+import { LoginformComponent } from './layout/header-menu/login-logout/loginform/loginform.component';
+import { LogoutformComponent } from './layout/header-menu/login-logout/logoutform/logoutform.component';
 
 registerLocaleData(vi);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutComponent,
+    LoginLogoutComponent,
+    LoginformComponent,
+    LogoutformComponent
   ],
   imports: [
     BrowserModule,
