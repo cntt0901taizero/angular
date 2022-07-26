@@ -36,9 +36,12 @@
             ],
             "styles": [
               "src/theme.less",
+              "src/assets/lib/ckeditor5/sample/styles.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/lib/ckeditor5/build/ckeditor.js"
+            ]
           },
           "configurations": {
             "production": {
