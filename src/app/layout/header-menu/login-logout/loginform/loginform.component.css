@@ -1,0 +1,27 @@
+.login-form {
+  max-width: 100%;
+}
+
+.login-form-margin {
+  margin-bottom: 16px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.other-login-text {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(150, 77, 29);
+  text-align: center;
+}
+
+.other-login-icon {
+  font-size: 16px;
+  text-align: center;
+}

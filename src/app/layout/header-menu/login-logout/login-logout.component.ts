@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NzModalService } from 'ng-zorro-antd/modal';
+import { LoginformComponent } from './loginform/loginform.component';
 
 @Component({
   selector: 'app-login-logout',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginLogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NzModalService) { }
 
   ngOnInit(): void {
   }
+
+  openModalSignin(): void {
+    this.modalService.create({
+      nzTitle: 'Đăng nhập',
+      nzContent: LoginformComponent,
+      nzFooter: null,
+      nzWidth: 400
+    });
+  }
+
+  
 
 }

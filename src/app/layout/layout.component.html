@@ -13,9 +13,9 @@
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li *ngFor="let menuItems of ListMenu" nz-submenu nzOpen nzTitle="{{menuItems.nzTitle}}" nzIcon="{{menuItems.nzIcon}}">
+      <li *ngFor="let menuItems of ListMenu" nz-submenu [nzOpen]="menuItems.nzOpen" nzTitle="{{menuItems.nzTitle}}" nzIcon="{{menuItems.nzIcon}}">
         <ul>
-          <li *ngFor="let item of menuItems.listMenuItem" nz-menu-item nzMatchRouter>
+          <li *ngFor="let item of menuItems.listMenuItem" nz-menu-item [nzMatchRouter]="item.nzMatchRouter">
             <a routerLink="{{item.routerLink}}">{{item.nzTitle}}</a>
           </li>
         </ul>

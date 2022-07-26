@@ -1,1 +1,47 @@
-<p>loginform works!</p>
+<form nz-form [formGroup]="rfDataModal" class="login-form" (ngSubmit)="save()">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your username!">
+      <nz-input-group nzPrefixIcon="user">
+        <input type="text" nz-input formControlName="userName" placeholder="Tên đăng nhập" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your Password!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input type="password" nz-input formControlName="password" placeholder="Mật khẩu" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <div nz-row class="login-form-margin">
+    <div nz-col [nzSpan]="12">
+      <label nz-checkbox formControlName="remember">
+        <span>Ghi nhớ </span>
+      </label>
+    </div>
+    <div nz-col [nzSpan]="12">
+      <a class="login-form-forgot">Quên mật khẩu</a>
+    </div>
+  </div>
+  <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">
+    Đăng nhập
+  </button>
+  hoặc
+  <a (click)="openModalSignup()">Đăng ký ngay bây giờ!</a>
+
+  <div nz-row style="margin-top: 25px;">
+    <div nz-col [nzSpan]="24" class="other-login-text">
+      <span>Đăng nhập với</span>
+    </div>
+    <div nz-col [nzSpan]="24" class="other-login-icon">
+      <span>
+        <a (click)="signInWithGoogle()">
+          <i nz-icon nzType="google" style="margin: 6px; font-size: 22px; color: rgb(189, 66, 35);"></i>
+        </a>
+        <a (click)="signInWithFB()">
+          <i nz-icon nzType="facebook" style="margin: 6px; font-size: 22px; color: rgb(38, 67, 145);"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+</form>
