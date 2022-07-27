@@ -48,6 +48,7 @@ export class AuthService {
 
       this.router.navigate(['/welcome']);
       localStorage.setItem('token', JSON.stringify(res.additionalUserInfo.profile.id));
+      alert("Đăng nhập thành công!");
 
       // email: "thetaichu@gmail.com"
       // given_name: "taichu"
