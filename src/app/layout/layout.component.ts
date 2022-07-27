@@ -11,13 +11,13 @@ export class LayoutComponent implements OnInit {
     {
       nzTitle: "Trang chủ",
       nzIcon: "book",
-      nzOpen: true,
+      nzOpen: false,
       listMenuItem: [
         {
           nzTitle: "Welcome",
           nzIcon: "",
           routerLink: "/welcome",
-          nzMatchRouter: true,
+          nzMatchRouter: false,
         },
         {
           nzTitle: "Dashboard",

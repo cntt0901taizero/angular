@@ -7,8 +7,9 @@
             [(nzCollapsed)]="isCollapsed"
             [nzTrigger]="null">
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+      <a href="https://www.abbank.vn/" target="_blank">
+        <img *ngIf="isCollapsed" class="menu-logo1" src="https://cdn.abbank.vn/uploads/images/2020/05/26/logo.png" alt="logo">
+        <img *ngIf="!isCollapsed" class="menu-logo2" src="https://cdn.abbank.vn/uploads/images/2020/05/26/logo.png" alt="logo">
         <h1>Web DEV</h1>
       </a>
     </div>

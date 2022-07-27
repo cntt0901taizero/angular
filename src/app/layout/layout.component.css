@@ -19,17 +19,24 @@
 .sidebar-logo {
   position: relative;
   height: 64px;
-  padding-left: 24px;
+  padding-left: 10px;
   overflow: hidden;
   line-height: 64px;
   background: #001529;
   transition: all .3s;
 }
 
-.sidebar-logo img {
+.sidebar-logo img.menu-logo1 {
   display: inline-block;
-  height: 32px;
-  width: 32px;
+  height: 20px;
+  width: 60px;
+  vertical-align: middle;
+}
+
+.sidebar-logo img.menu-logo2 {
+  display: inline-block;
+  height: 30px;
+  width: 130px;
   vertical-align: middle;
 }
 
