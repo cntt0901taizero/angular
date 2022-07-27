@@ -46,6 +46,7 @@ export class AuthService {
 
   googleSignIn() {
     return this.fireAuth.signInWithPopup(new GoogleAuthProvider).then((res: any) => {
+      
       this.router.navigate(['/welcome']);
       sessionStorage.setItem('user', JSON.stringify(res.additionalUserInfo.profile));
       localStorage.setItem('token', JSON.stringify(res.additionalUserInfo.profile.id));
