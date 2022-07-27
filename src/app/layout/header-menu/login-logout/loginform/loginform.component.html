@@ -28,23 +28,12 @@
   </button>
   hoặc
   <a (click)="openModalSignup()">Đăng ký ngay bây giờ!</a>
-
-  <div nz-row style="margin-top: 25px;">
-    <div nz-col [nzSpan]="24" class="other-login-text">
-      <span>Đăng nhập với</span>
-    </div>
+  <div style="margin-top: 30px;"></div>
+  <div nz-row [nzGutter]="[16,16]">
     <div nz-col [nzSpan]="24" class="other-login-icon">
-      <span>
-        <a >
-          <i nz-icon nzType="google" style="margin: 8px; font-size: 22px; color: rgb(189, 66, 35);"></i>
-        </a>
-        <a >
-          <i nz-icon nzType="facebook" style="margin: 8px; font-size: 22px; color: rgb(38, 67, 145);"></i>
-        </a>
-        <a >
-          <i nz-icon nzType="github" style="margin: 8px; font-size: 22px; color: rgb(0, 0, 0);"></i>
-        </a>
-      </span>
+      <cool-google-button color="light" (click)="onGoogleLoginClicked()">
+        Login with Google
+      </cool-google-button>
     </div>
   </div>
 </form>

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "taichu-test1"
+  },
+  "targets": {
+    "taichu-test1": {
+      "hosting": {
+        "my-app": [
+          "taichu-test1"
+        ]
+      }
+    }
+  }
+}

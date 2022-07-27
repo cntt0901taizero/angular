@@ -19,7 +19,7 @@ export class LoginLogoutComponent implements OnInit {
       nzTitle: 'Đăng nhập',
       nzContent: LoginformComponent,
       nzFooter: null,
-      nzWidth: 400
+      nzWidth: 350
     });
   }
 

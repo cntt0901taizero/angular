@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  jsonId = `{
+  jsonConsleGoogleCloud = `{
     "web":{
         "client_id":"798964895342-hkba27h77nmogd8pmfalmo1lfa2udjin.apps.googleusercontent.com",
         "project_id":"taichu-test1",
@@ -17,6 +17,7 @@ export class WelcomeComponent implements OnInit {
         "client_secret":"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"
     }
   }`;
+  
   constructor() { }
 
   ngOnInit() {
