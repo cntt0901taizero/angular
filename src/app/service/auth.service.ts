@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { User } from './user.model';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { 
   GoogleAuthProvider, 
   FacebookAuthProvider, 
@@ -16,12 +15,14 @@ import { JsonPipe } from '@angular/common';
   providedIn: 'root'
 })
 export class AuthService {
-  user$!: Observable<User>;
+  tokenIdSession$!: Subject<string>;
 
   constructor(
     private fireAuth: AngularFireAuth,
     private router: Router
-  ) { }
+  ) { 
+    this.tokenIdSession$ = new BehaviorSubject<string>("");
+  }
 
   login(email: string, password: string) {
 
@@ -45,10 +46,10 @@ export class AuthService {
 
   googleSignIn() {
     return this.fireAuth.signInWithPopup(new GoogleAuthProvider).then((res: any) => {
-
       this.router.navigate(['/welcome']);
+      sessionStorage.setItem('user', JSON.stringify(res.additionalUserInfo.profile));
       localStorage.setItem('token', JSON.stringify(res.additionalUserInfo.profile.id));
-      alert("Đăng nhập thành công!");
+      this.tokenIdSession$.next(res.additionalUserInfo.profile.id);
 
       // email: "thetaichu@gmail.com"
       // given_name: "taichu"

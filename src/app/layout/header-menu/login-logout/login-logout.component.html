@@ -1,9 +1,13 @@
-<div>
-    <span class="header-signin-text">
-        <a (click)="openModalSignin()">Sign in</a>
-    </span>
-</div>
-<!-- <div>
+<span class="header-signin-text">
+    <a (click)="openModalSignin()">{{_tokenIdSession == '' ? 'Đăng nhập' : _user.name}}</a>
+</span>
+
+<!-- <span *ngIf="_tokenIdSession == ''; else logined" class="header-signin-text">
+    <a (click)="openModalSignin()">Sign in</a>
+</span>
+
+<ng-template #logined>
     <img src="" />
     <span></span>
-</div> -->
+</ng-template> -->
+

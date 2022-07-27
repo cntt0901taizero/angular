@@ -21,7 +21,6 @@ export class LoginformComponent implements OnInit {
   constructor(
     private dataService: ContentfulService,
     private authService: AuthService,
-
     private modal: NzModalRef,
     private modalService: NzModalService,
     private fb: FormBuilder,
@@ -67,7 +66,7 @@ export class LoginformComponent implements OnInit {
       nzTitle: 'Đăng ký',
       nzContent: SignupformComponent,
       nzFooter: null,
-      nzWidth: 350
+      nzWidth: 300
     });
   }
 
