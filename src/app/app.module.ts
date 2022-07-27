@@ -14,8 +14,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { LoginLogoutComponent } from './layout/header-menu/login-logout/login-logout.component';
 import { LoginformComponent } from './layout/header-menu/login-logout/loginform/loginform.component';
 import { SignupformComponent } from './layout/header-menu/login-logout/signupform/signupform.component';
-import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
-import { GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
+// import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
+// import { GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -37,31 +37,31 @@ registerLocaleData(vi);
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
-    SocialLoginModule
+    // SocialLoginModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN },
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '798964895342-hkba27h77nmogd8pmfalmo1lfa2udjin.apps.googleusercontent.com'
-            )
-          },
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('798964895342-hkba27h77nmogd8pmfalmo1lfa2udjin.apps.googleusercontent.com')
-          }
-        ],
-        onError: (err) => {
-          console.error(err);
-        }
-      } as SocialAuthServiceConfig,
-    }
+    // {
+    //   provide: 'SocialAuthServiceConfig',
+    //   useValue: {
+    //     autoLogin: false,
+    //     providers: [
+    //       {
+    //         id: GoogleLoginProvider.PROVIDER_ID,
+    //         provider: new GoogleLoginProvider(
+    //           '798964895342-hkba27h77nmogd8pmfalmo1lfa2udjin.apps.googleusercontent.com'
+    //         )
+    //       },
+    //       {
+    //         id: FacebookLoginProvider.PROVIDER_ID,
+    //         provider: new FacebookLoginProvider('798964895342-hkba27h77nmogd8pmfalmo1lfa2udjin.apps.googleusercontent.com')
+    //       }
+    //     ],
+    //     onError: (err) => {
+    //       console.error(err);
+    //     }
+    //   } as SocialAuthServiceConfig,
+    // }
   ],
   bootstrap: [AppComponent]
 

@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@abacritt/angularx-social-login@^1.2.1":
-  "integrity" "sha512-z3VNRjjrThdY1lOlQLOxPqFlFc+Q+ajjtPAwA4sNLsUwlPArYrQtTTm5eRcceVHoZ8I1zhP40nhE9CnEGNboCA=="
-  "resolved" "https://registry.npmjs.org/@abacritt/angularx-social-login/-/angularx-social-login-1.2.1.tgz"
-  "version" "1.2.1"
-  dependencies:
-    "tslib" "^2.3.1 || ^2.4.0"
-
 "@ampproject/remapping@2.2.0":
   "integrity" "sha512-qRmjj8nj9qmLTQXXmaR1cck3UXSRMPrbsLJAasZpF+t3riI71BXed5ebIOYwQntykeZuhjsdweEc9BxH5Jc26w=="
   "resolved" "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.2.0.tgz"
@@ -189,7 +182,7 @@
     "symbol-observable" "4.0.0"
     "uuid" "8.3.2"
 
-"@angular/common@^13.0.0 || ^14.0.0", "@angular/common@^13.0.0 || ^14.0.0-0", "@angular/common@^13.0.1", "@angular/common@~13.1.0", "@angular/common@13.1.2":
+"@angular/common@^13.0.0 || ^14.0.0-0", "@angular/common@^13.0.1", "@angular/common@~13.1.0", "@angular/common@13.1.2":
   "integrity" "sha512-/8RWYQkZ1KPNvu2FANJM44wXlOMjMyxZVOEIn3llMRgxV2iiYtmluAOJNafTAbKedAuD6wiSpbi++QbioqCyyA=="
   "resolved" "https://registry.npmjs.org/@angular/common/-/common-13.1.2.tgz"
   "version" "13.1.2"
@@ -220,7 +213,7 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/core@^13.0.0", "@angular/core@^13.0.0 || ^14.0.0", "@angular/core@^13.0.0 || ^14.0.0-0", "@angular/core@^13.0.1", "@angular/core@~13.1.0", "@angular/core@13.1.2":
+"@angular/core@^13.0.0", "@angular/core@^13.0.0 || ^14.0.0-0", "@angular/core@^13.0.1", "@angular/core@~13.1.0", "@angular/core@13.1.2":
   "integrity" "sha512-dsb90lUf8BELzdg7MgSMfPc36xzZKsDggOimfXhIvmctgc+H71Zo07KYTy5JVqsscLdT+A/KBvtU1bKk4P+Rfg=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-13.1.2.tgz"
   "version" "13.1.2"
@@ -6020,7 +6013,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
 
-"tslib@^2.0.0", "tslib@^2.3.0", "tslib@^2.3.1 || ^2.4.0":
+"tslib@^2.0.0", "tslib@^2.3.0":
   "integrity" "sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
   "version" "2.4.0"
