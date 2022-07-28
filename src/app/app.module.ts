@@ -19,6 +19,7 @@ import { CoolSocialLoginButtonsModule } from '@angular-cool/social-login-buttons
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './service/auth.service';
+import { ContentfulService } from './service/contentful.service';
 
 registerLocaleData(vi);
 
@@ -42,8 +43,9 @@ registerLocaleData(vi);
     AngularFireModule.initializeApp(environment.firebaseConfig) // firebase
   ],
   providers: [
-    AuthService,
     { provide: NZ_I18N, useValue: vi_VN },
+    AuthService,
+    ContentfulService,
   ],
   bootstrap: [AppComponent],
 

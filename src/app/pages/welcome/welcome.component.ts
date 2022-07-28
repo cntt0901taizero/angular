@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Entry } from 'contentful';
+import { Observable } from 'rxjs';
+import { ContentfulService } from 'src/app/service/contentful.service';
 
 @Component({
   selector: 'app-welcome',
@@ -17,10 +20,17 @@ export class WelcomeComponent implements OnInit {
         "client_secret":"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"
     }
   }`;
+
+  allData$: Observable<any> | undefined;
+  userData!: Entry<any>[];
   
-  constructor() { }
+  constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
+    this.allData$ = this.contentfulService.getAllEntries();
+    this.contentfulService.getUser().then(rs => {
+      this.userData = rs;
+    });
   }
 
 }
